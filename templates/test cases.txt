@@ -1,0 +1,38 @@
+
+output :
+
+abc d e
+
+input :
+
+abc d e
+a&#x62;d
+a&#x72;d
+ab&#x63;&#x20;f
+abc &#x64;
+abc&#x20;&#x64;
+ab&#x63;&#x20;&#x64;
+a&#x62;c d&#x31;f
+&#x61;bc &#x64;&#x20;&#x65;
+&#x61;bc&#x20;&#x64;&#x20;&#x65a;
+ a&#x72;d
+&#x61;bc&#x20;&#x64;&#x20;e&#x65a;
+a&#x62;&
+&#x61;&#x62;&#x63;&#x20;
+
+ans :
+
+raw = 7, last_word_breaker = 6, rem = 7, last_word_breaker_pos_output = 6, input.maxLength = 50
+raw = 7, last_word_breaker = 0, rem = 7, last_word_breaker_pos_output = 0, input.maxLength = 17
+raw = 4, last_word_breaker = 0, rem = 1, last_word_breaker_pos_output = 0, input.maxLength = 19
+raw = 14, last_word_breaker = 14, rem = 14, last_word_breaker_pos_output = 4, input.maxLength = 15
+raw = 10, last_word_breaker = 4, rem = 10, last_word_breaker_pos_output = 4, input.maxLength = 50
+raw = 15, last_word_breaker = 9, rem = 15, last_word_breaker_pos_output = 4, input.maxLength = 50
+raw = 20, last_word_breaker = 14, rem = 20, last_word_breaker_pos_output = 4, input.maxLength = 50
+raw = 13, last_word_breaker = 9, rem = 10, last_word_breaker_pos_output = 4, input.maxLength = 19
+raw = 27, last_word_breaker = 21, rem = 27, last_word_breaker_pos_output = 6, input.maxLength = 50
+raw = 31, last_word_breaker = 26, rem = 26, last_word_breaker_pos_output = 6, input.maxLength = 20
+raw = 0, last_word_breaker = 0, rem = 0, last_word_breaker_pos_output = 0, input.maxLength = 15
+raw = 27, last_word_breaker = 26, rem = 27, last_word_breaker_pos_output = 6, input.maxLength = 50
+raw = 8, last_word_breaker = 0, rem = 7, last_word_breaker_pos_output = 0, input.maxLength = 50
+raw = 24, last_word_breaker = 24, rem = 24, last_word_breaker_pos_output = 4, input.maxLength = 50
