@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<title>
+		iCarnivore
+	</title>
+	
+	<style>
+		
+		* {
+			margin: 0px;
+			padding: 0px;
+			font-size: 20px;
+			font-family: consolas;
+			box-sizing: border-box;
+		}
+		
+		html, body, table {
+			height: 100%;
+		}
+		
+		table {
+			width: 100%;
+			border-spacing: 10px;
+			border-collapse: saperate;
+		}
+		
+		.mid_table {
+			border-spacing: 0px;
+			border_collapse: collapse;
+		}
+		
+		.correct {
+			color: #99cc00;
+		}
+		
+		.incorrect {
+			background-color: #f0a3a3;
+		}
+		
+		.remaining_chars {
+			border-left: 0.01em solid black;
+		}
+		
+		.top {
+			height: 100px;
+		}
+		
+		.bottom {
+			height: 100px;
+		}
+		
+		.text {
+			height: 542px;
+			width: 644px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			margin-right: auto;
+			margin-left: auto;
+			padding: 10px;
+			display: block;
+			border: 1px solid rgb(146,146,141);
+			border-radius: 5px;
+			resize: none;
+		}
+		
+		button {
+			margin-top: 0px;
+			margin-bottom: 0px;
+			margin-right: auto;
+			margin-left: auto;
+			width: auto;
+			padding: 4px;
+			display: block;
+		}
+		
+		.fake_hint1 {
+			width: 644px;
+			height: 20px;
+			color: #0074D9;
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-right: auto;
+			margin-left: auto;
+			white-space: break-spaces;
+			word-break: break-word;
+		}
+		
+		.mid1 {
+			height: 542px;
+			position: relative;
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-right: auto;
+			margin-left: auto;
+			display: block;
+		}
+		
+		.line {
+			height: 425px;
+			border-left: 1px solid black;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		
+		.mid2 {
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-right: auto;
+			margin-left: auto;
+			display: block;
+		}
+		
+		.fake_hint2 {
+			height: 20px;
+			color: #0074D9;
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-right: auto;
+			margin-left: auto;
+			white-space: break-spaces;
+			word-break: break-word;
+		}
+		
+		.output {
+			height: 542px;
+			width: 644px;
+			overflow: hidden;
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-right: auto;
+			margin-left: auto;
+			padding: 10px;
+			display: block;
+			border: 1px solid rgb(146,146,141);
+			border-radius: 5px;
+			white-space: break-spaces;
+			word-break: break-word;
+			overflow: auto;
+		}
+		
+		.user_input {
+			width: 644px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			margin-right: auto;
+			margin-left: auto;
+			display: block;
+			height: 100%;
+			overflow: hidden;
+			resize: none;
+		}
+		
+		.hint {
+			width: 644px;
+			height: 20px;
+			color: #0074D9;
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-right: auto;
+			margin-left: auto;
+			white-space: break-spaces;
+			word-break: break-word;
+		}
+		
+	</style>
+	
+</head>
+
+<body onload = "on_load ()">
+
+<div class = "typing_arena">
+	<table>
+		<tr class = "top"></tr>
+		<tr>
+			<td>
+				<table>
+					<tr>
+						<td>
+							<textarea dir = "auto" spellcheck = "false" id = "text" class = "text" 
+							autocomplete = "off" autocorrect = "off" autocapitalize = "off" ></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button type = "button" id = "button" onclick = "get_inner_text ()">Update</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class = "fake_hint1"></div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table class = "mid_table">
+					<tr>
+						<td>
+							<div class = "mid1">
+								<div class = "line"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class = "mid2"></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class = "fake_hint2"></div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td>
+							<div dir = "auto" spellcheck = "false" class = "output" id = "output"></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<textarea dir = "auto" type = "text" class = "user_input" id = "input" 
+							rows = "2" autocomplete = "off" autocorrect = "off" autocapitalize = "off" 
+							spellcheck = "false" onpaste = "return true" ondrop = "return false"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div id = "hint" class = "hint"></div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr class = "bottom"></tr>
+	</table>
+</div>
+
+<script src="encode.js"></script>
+
+</html>
